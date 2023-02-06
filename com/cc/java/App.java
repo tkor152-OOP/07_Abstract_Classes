@@ -16,23 +16,33 @@ public class App {
         output("------  Differenzen ------");
         output("Diff. r-t: " + areaDiff(rectangle, triangle));
         output("Diff. r-c: " + areaDiff(rectangle, circle));
+
+
+        output("Diff. c-t: " + areaDiff(circle, triangle));
+        output("Diff. t-t: " + areaDiff(triangle, triangle));
     }
 
     private static void output(String outputStr) {
         System.out.println(outputStr);
     }
 
-    // ---------- Überladen / Overloading ---------- //
-    private static double areaDiff(Rectangle r, Triangle t) {
-        return r.area() - t.area();
+    // 2. Variante Polymorphie
+    private static double areaDiff(Shape s1, Shape s2) {
+        return s1.area() - s2.area();
     
     }
+    
+    // // ---------- Überladen / Overloading ---------- //
+    // private static double areaDiff(Rectangle r, Triangle t) {
+    //     return r.area() - t.area();
+    
+    // }
 
-    // 1. Variante ggf. 1000x überladen
-    private static double areaDiff(Rectangle r, Circle c) {
-        return r.area() - c.area();
+    // // 1. Variante ggf. 1000x überladen
+    // private static double areaDiff(Rectangle r, Circle c) {
+    //     return r.area() - c.area();
     
-    }
+    // }
 
 }
 
